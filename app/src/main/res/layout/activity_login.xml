@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:ignore="SpUsage"
+    tools:context="code.basic.LoginActivity">
+
+    <ImageView
+        android:id="@+id/ivTop"
+        android:layout_width="@dimen/_220sdp"
+        android:src="@mipmap/login_top"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_height="@dimen/_220sdp" />
+
+
+    <LinearLayout
+        android:id="@+id/llMobile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:layout_below="@+id/ivTop"
+        android:background="@drawable/et_rectangular_border"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+
+        <Spinner
+            android:id="@+id/spinnerCountry"
+            android:layout_width="@dimen/_80sdp"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content" />
+
+        <EditText
+            android:id="@+id/etMobile"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_regular"
+            android:inputType="number"
+            android:hint="@string/enterPhoneNumber"
+            android:background="@null"
+            android:maxLength="10" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_below="@+id/llMobile"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/continuee"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tvContinue"
+        android:layout_marginTop="@dimen/_45sdp"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_11sdp"
+            android:layout_gravity="center"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="@string/byContinuing" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:id="@+id/tvTnc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="@color/red"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="@string/termOfUse" />
+
+            <TextView
+                android:id="@+id/tvPrivacyPolicy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_11sdp"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/_2sdp"
+                android:textColor="@color/red"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="@string/privacyPolicy" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

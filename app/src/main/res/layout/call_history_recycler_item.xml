@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="10dp"
+    android:layout_marginStart="12dp"
+    android:layout_marginEnd="16dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/llMain"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:id="@+id/llCall"
+            android:gravity="center_vertical"
+
+            android:layout_marginEnd="16dp">
+
+            <ImageView
+                android:id="@+id/image_view_incoming_or_outgoing"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@mipmap/icon_call_voice_outgoing_filled"
+                android:layout_marginEnd="8dp" />
+
+            <ImageView
+                android:id="@+id/image_view_profile"
+                android:layout_width="@dimen/_30sdp"
+                android:visibility="gone"
+                android:layout_height="@dimen/_30sdp"
+                android:background="@drawable/ic_user_default" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/llCall"
+            android:layout_toStartOf="@+id/llCallTime"
+            android:id="@+id/llCallId"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp"
+            android:layout_marginBottom="10dp">
+
+            <TextView
+                android:id="@+id/text_view_nickname"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="16sp"
+                android:fontFamily="sans-serif-medium"
+                android:textColor="#e1000000"
+                android:letterSpacing="-0.01"
+                android:visibility="gone"
+                android:lineSpacingExtra="6sp"
+                android:layout_marginBottom="2dp"/>
+
+            <TextView
+                android:id="@+id/text_view_user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/fira_sans_medium"
+                android:textColor="@color/black"
+                android:maxLines="1"
+                android:visibility="gone"
+                android:lineSpacingExtra="2sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/text_view_end_result_and_duration"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="#61000000"
+                    android:lineSpacingExtra="2sp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:id="@+id/llCallTime"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:layout_marginEnd="4dp">
+
+            <TextView
+                android:id="@+id/text_view_start_at"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/_12sdp"
+                android:textColor="#80000000"
+                android:lineSpacingExtra="0sp"
+                android:gravity="right"
+
+                android:text="2020/08/20 9:41am" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:layout_marginStart="44dp">
+
+                <ImageView
+                    android:id="@+id/image_view_video_call"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/selector_video_call_image_view_in_history"
+                    android:layout_marginEnd="12dp" />
+
+                <ImageView
+                    android:id="@+id/image_view_voice_call"
+                    android:layout_width="@dimen/_20sdp"
+                    android:layout_height="@dimen/_20sdp"
+                    android:background="@drawable/selector_voice_call_image_view_in_history" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="#1e000000"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:layout_below="@+id/llMain" />
+
+</RelativeLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/lnLayout"
+    tools:context="code.groupvoicecall.room.SelectUserListActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/_10sdp"
+        android:id="@+id/rlHeader"
+        android:background="@color/colorPrimary">
+
+        <ImageView
+            android:id="@+id/ivBack"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/ic_back" />
+
+        <TextView
+            android:id="@+id/tvHeader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="@dimen/_13sdp"
+            android:textColor="@color/textBlack"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/fira_sans_sem_bold"
+            tools:ignore="SpUsage" />
+    </RelativeLayout>
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlHeader"
+        android:layout_above="@+id/btnCreateRoom"
+        android:id="@+id/rvUserList"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:id="@+id/btnCreateRoom"
+        android:background="@color/colorPrimary"
+        android:text="@string/createRoom"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:textColor="@color/black"
+        android:textAllCaps="false"
+        android:textSize="@dimen/_13sdp"
+        android:layout_alignParentBottom="true"/>
+
+</RelativeLayout>

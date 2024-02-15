@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/watchlater"
+        android:orderInCategory="200"
+        android:title="Save to Watch Later"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/downloadvideo"
+        android:orderInCategory="200"
+        android:title="Download video"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="200"
+        android:title="Share"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/notinterested"
+        android:orderInCategory="200"
+        android:title="Not Interested"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/report"
+        android:orderInCategory="200"
+        android:title="Report"
+        app:showAsAction="never" />
+
+
+</menu>

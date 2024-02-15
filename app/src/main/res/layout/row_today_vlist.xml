@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="150dp"
+    android:layout_margin="@dimen/_5sdp"
+    android:layout_height="230dp">
+      <ImageView
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentEnd="true"
+        android:elevation="1dp"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:id="@+id/imgmenu"
+        android:scaleType="fitXY"
+        android:src="@drawable/ic_more"/>
+      <ImageView
+         android:layout_width="match_parent"
+         android:layout_height="match_parent"
+         android:id="@+id/imgtodaythumb"
+         android:scaleType="fitXY"
+         android:src="@drawable/noimagefound"/>
+      <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:orientation="vertical"
+        android:layout_margin="@dimen/_5sdp"
+        android:layout_alignParentBottom="true">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txttitle"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/fira_sans_sem_bold"
+            android:text=""
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/txttitle"
+            android:id="@+id/txtview"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_sem_bold"
+            android:text="2.4M View"
+            android:maxLines="2"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+</RelativeLayout>

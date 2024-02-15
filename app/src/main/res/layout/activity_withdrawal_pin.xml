@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="code.activity.WithdrawalPinActivity"
+    tools:ignore="SpUsage">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/enterPin"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_16sdp" />
+
+    <LinearLayout
+        android:id="@+id/llPin1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/etPin1"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:background="@drawable/et_rectangular_border_no_radius"
+            android:fontFamily="@font/fira_sans_regular"
+            android:gravity="center"
+            android:hint="*"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_10sdp" />
+
+
+        <EditText
+            android:id="@+id/etPin2"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/et_rectangular_border_no_radius"
+            android:fontFamily="@font/fira_sans_regular"
+            android:gravity="center"
+            android:hint="*"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_10sdp"/>
+
+
+        <EditText
+            android:id="@+id/etPin3"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/et_rectangular_border_no_radius"
+            android:fontFamily="@font/fira_sans_regular"
+            android:gravity="center"
+            android:hint="*"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_10sdp"/>
+
+
+        <EditText
+            android:id="@+id/etPin4"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/et_rectangular_border_no_radius"
+            android:fontFamily="@font/fira_sans_regular"
+            android:gravity="center"
+            android:hint="*"
+            android:inputType="numberPassword"
+            android:maxLength="1"
+            android:padding="@dimen/_10sdp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvForgot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/llPin1"
+        android:layout_centerHorizontal="true"
+        android:text="@string/forgotPinQ"
+        android:textAllCaps="false"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_13sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnVerify"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/verify"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+</RelativeLayout>

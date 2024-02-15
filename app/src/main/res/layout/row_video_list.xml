@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardElevation="1dp"
+    app:cardMaxElevation="1dp"
+    android:layout_marginTop="3dp"
+    android:layout_marginBottom="3dp"
+    app:cardBackgroundColor="@color/white"
+    app:cardCornerRadius="2dp">
+    <LinearLayout
+        android:paddingBottom="@dimen/_5sdp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/white"
+        android:orientation="vertical">
+        <androidx.cardview.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            app:cardMaxElevation="@dimen/_1sdp"
+            android:visibility="visible"
+            app:cardElevation="@dimen/_1sdp">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <ImageView
+                    android:id="@+id/ivThumb"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY"
+                    />
+
+                <ImageView
+                    android:layout_width="44dp"
+                    android:layout_height="44dp"
+                    android:layout_centerInParent="true"
+                    android:scaleType="fitXY"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_play" />
+            </RelativeLayout>
+        </androidx.cardview.widget.CardView>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_marginBottom="@dimen/_8sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:layout_marginStart="3dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/gray"
+                android:src="@drawable/ic_user_default" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ivProfileImage"
+                android:layout_toStartOf="@+id/ivMenu"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/black"
+                    android:id="@+id/tvDesc"
+                    android:maxLines="2"
+                    android:textSize="@dimen/_11sdp"
+                    android:fontFamily="@font/fira_sans_regular"
+                    android:text="descriptions"
+                    />
+                <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content">
+
+                    <TextView
+                        android:id="@+id/tvTotalView"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:fontFamily="@font/fira_sans_regular"
+                        android:text=""
+                        android:textColor="@color/graybold"
+                        android:textSize="@dimen/_10sdp" />
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/graybold"
+                        android:textSize="@dimen/_10sdp"
+                        android:text="@string/view"
+                        android:id="@+id/tvUploadDateTime"
+                        android:layout_toEndOf="@+id/tvTotalView"
+                        android:fontFamily="@font/fira_sans_regular"
+                        android:layout_marginStart="5dp"
+                        android:layout_centerVertical="true"/>
+                </RelativeLayout>
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivMenu"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_menus" />
+        </RelativeLayout>
+
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
+

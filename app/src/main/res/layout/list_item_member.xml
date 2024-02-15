@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/ivImage"
+        android:layout_width="@dimen/_40sdp"
+        android:layout_height="@dimen/_40sdp"
+        app:civ_border_color="@color/gray"
+        app:civ_border_width="0.50dp"
+        android:src="@drawable/ic_user_default"
+         />
+
+    <TextView
+        android:id="@+id/tvName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:textColor="@color/black"
+        android:layout_toRightOf="@+id/ivImage"
+        android:textSize="@dimen/_15sdp"
+        android:singleLine="true"
+        android:layout_toLeftOf="@+id/tvIsAdminStatus"
+        android:fontFamily="@font/fira_sans_regular"
+        android:layout_centerVertical="true"/>
+    <TextView
+        android:id="@+id/tvIsAdminStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:textColor="@color/black"
+        android:visibility="gone"
+        android:layout_alignParentEnd="true"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:layout_centerVertical="true"/>
+</RelativeLayout>

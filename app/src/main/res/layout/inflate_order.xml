@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView android:id="@+id/cvMain"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/_10sdp"
+    app:cardCornerRadius="@dimen/_5sdp"
+    tools:ignore="SpUsage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        <TextView
+            android:id="@+id/tvOrderNo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_medium"
+            android:paddingStart="@dimen/_5sdp"
+            android:text="10024"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_12sdp" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#33DADADA"
+            android:orientation="horizontal"
+            android:padding="@dimen/_10sdp">
+
+            <com.makeramen.roundedimageview.RoundedImageView
+                android:id="@+id/ivImage"
+                android:layout_width="@dimen/_60sdp"
+                android:scaleType="fitXY"
+                android:layout_height="@dimen/_50sdp"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                app:riv_corner_radius="@dimen/_10sdp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_toEndOf="@+id/ivImage"
+                android:layout_toStartOf="@+id/tvStatus">
+                <TextView
+                    android:id="@+id/tvStoreName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:singleLine="true"
+                    android:fontFamily="@font/fira_sans_sem_bold"
+                    android:text="@string/storeName"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tvAddress"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="2"
+                    android:layout_marginEnd="@dimen/_15sdp"
+                    android:layout_marginStart="@dimen/_10sdp"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/fira_sans_regular"
+                    android:text="@string/storeName"
+                    android:textColor="@color/textGrey"
+                    android:textSize="@dimen/_9sdp" />
+
+            </LinearLayout>
+
+
+
+            <TextView
+                android:id="@+id/tvStatus"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true"
+                android:background="@drawable/bg_white_no_radius"
+                android:backgroundTint="#66C4C4C4"
+                android:paddingStart="@dimen/_8sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_8sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:text="@string/pending"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/_11sdp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tvStatus"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="@string/details"
+                android:textColor="@color/red"
+                android:textSize="@dimen/_11sdp"
+                app:drawableEndCompat="@drawable/ic_arrow_right_blue"
+                app:drawableTint="@color/red" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_5sdp"
+            >
+            <TextView
+                android:id="@+id/tvItemName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fira_sans_medium"
+                android:text="@string/storeName"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/_13sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:backgroundTint="@color/bg_grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tvDateTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="@string/storeName"
+                android:textColor="@color/textGrey"
+                android:textSize="@dimen/_12sdp" />
+
+
+            <TextView
+                android:id="@+id/tvAmount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="@string/storeName"
+                android:textColor="@color/textGrey"
+                android:textSize="@dimen/_12sdp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:backgroundTint="@color/bg_grey" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/_10sdp">
+
+            <TextView
+                android:id="@+id/tvYouRated"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="@string/youRated"
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/_13sdp" />
+
+            <TextView
+                android:id="@+id/tvRating"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/tvYouRated"
+                android:background="@drawable/btn_rectangular_less_radius"
+                android:backgroundTint="@color/green"
+                android:drawablePadding="@dimen/_5sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:padding="@dimen/_5sdp"
+                android:text="5.2"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp"
+                app:drawableEndCompat="@drawable/ic_star_golden" />
+
+
+            <TextView
+                android:id="@+id/tvReOrder"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/btn_rectangular_less_radius"
+                android:drawablePadding="@dimen/_5sdp"
+                android:paddingStart="@dimen/_10sdp"
+                android:paddingTop="@dimen/_5sdp"
+                android:paddingEnd="@dimen/_10sdp"
+                android:paddingBottom="@dimen/_5sdp"
+                android:visibility="gone"
+                android:text="@string/reorder"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp"
+                app:drawableStartCompat="@drawable/ic_re_order" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

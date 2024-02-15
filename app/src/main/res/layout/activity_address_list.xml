@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="code.activity.AddressListActivity"
+    tools:ignore="SpUsage">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:text="@string/myAddresses"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:id="@+id/tvAddAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:drawablePadding="@dimen/_5sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:text="@string/addAddresses"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_11sdp"
+        app:drawableStartCompat="@drawable/ic_plus"
+        app:drawableTint="@color/redDark" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

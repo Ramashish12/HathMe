@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/rlMain"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp"
+    tools:ignore="SpUsage">
+
+
+    <RelativeLayout
+        android:id="@+id/rlFg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_55sdp"
+        android:background="@color/white">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfile"
+            android:layout_width="@dimen/_36sdp"
+            android:layout_height="@dimen/_36sdp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_user_default" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/ivProfile"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:singleLine="true"
+                android:fontFamily="@font/fira_sans_medium"
+                android:text=""
+                android:textColor="@color/textBlack"
+                android:textSize="@dimen/_15sdp" />
+            <RatingBar
+                android:id="@+id/ratingBar"
+                style="@style/Widget.AppCompat.RatingBar.Small"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:progressTint="@color/golden"
+                android:secondaryProgressTint="@color/golden" />
+        </LinearLayout>
+
+
+        <TextView
+            android:id="@+id/tvRateUser"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/rateUser"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_11sdp"
+            android:visibility="gone" />
+
+
+
+        <RelativeLayout
+            android:id="@+id/rlMutualProfile"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/ivProfile">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivMutualProfile1"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:visibility="gone"
+                android:elevation="@dimen/_1sdp"
+                android:src="@drawable/ic_user_default" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivMutualProfile2"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:visibility="gone"
+                android:layout_marginStart="@dimen/_minus5sdp"
+                android:layout_toEndOf="@+id/ivMutualProfile1"
+                android:src="@drawable/ic_user_default" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvMutualFriends"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvName"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_toEndOf="@+id/rlMutualProfile"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text=""
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_11sdp" />
+
+        <ImageView
+            android:id="@+id/ivAction"
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:src="@mipmap/send_request" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/llBg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rlFg"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/white"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivAudioCall"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:background="@drawable/circle_bg"
+            android:backgroundTint="@color/redDark"
+            android:elevation="5dp"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_call"
+            app:tint="@color/white" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@color/bg_grey"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivVideoCall"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/circle_bg"
+            android:backgroundTint="@color/redDark"
+            android:elevation="1dp"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_videocam"
+            app:tint="@color/white" />
+
+        <View
+            android:layout_width="@dimen/_1sdp"
+            android:layout_height="match_parent"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+
+            android:background="@color/bg_grey"
+            android:visibility="gone" />
+
+        <ImageView
+            android:id="@+id/ivChat"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:layout_marginEnd="0dp"
+            android:background="@drawable/circle_bg"
+            android:backgroundTint="@color/redDark"
+            android:padding="@dimen/_7sdp"
+            android:src="@drawable/ic_chat"
+            app:tint="@color/white" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/view3"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_below="@+id/llBg"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:background="@color/gray" />
+</RelativeLayout>

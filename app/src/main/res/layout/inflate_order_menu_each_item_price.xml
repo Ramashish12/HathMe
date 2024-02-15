@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingTop="@dimen/_3sdp"
+    android:paddingBottom="@dimen/_3sdp"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_8sdp"
+        android:layout_marginEnd="@dimen/_10sdp">
+        <TextView
+            android:id="@+id/tvItemName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/accept"
+            android:layout_toStartOf="@+id/rlItemQty"
+            android:scrollbarSize="@dimen/_13sdp"
+            android:textColor="@color/textBlack"
+            android:singleLine="true"
+            android:fontFamily="@font/fira_sans_medium" />
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:id="@+id/rlItemQty"
+            android:layout_centerInParent="true"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/tvQuantity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/accept"
+                android:layout_alignParentStart="true"
+                android:layout_centerVertical="true"
+                android:scrollbarSize="@dimen/_11sdp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/fira_sans_regular" />
+            <TextView
+                android:id="@+id/tvX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="x"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:scrollbarSize="@dimen/_11sdp"
+                android:textColor="@color/textBlack"
+                android:layout_toRightOf="@+id/tvQuantity"
+                android:fontFamily="@font/fira_sans_regular" />
+            <TextView
+                android:id="@+id/tvItemPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_toEndOf="@+id/tvX"
+                android:fontFamily="@font/fira_sans_regular"
+                android:scrollbarSize="@dimen/_11sdp"
+                android:text="@string/accept"
+                android:textColor="@color/textBlack" />
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/tvTotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/accept"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:scrollbarSize="@dimen/_11sdp"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/fira_sans_regular" />
+
+    </RelativeLayout>
+
+</LinearLayout>

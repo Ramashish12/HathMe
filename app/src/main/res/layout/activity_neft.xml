@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:gravity="center_vertical"
+        android:text="@string/payViaNeft"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_15sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:id="@+id/llName"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/accountName"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvAccountName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="right"
+            android:text="CITIBUS ssPrivate Limited"
+            android:textAllCaps="true"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/llBankName"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="@dimen/_122sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/bankName"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvBankName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="right"
+            android:text="HDFC Bank"
+            android:textAllCaps="true"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/llBankAccount"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_122sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/accountNumber"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvAccountNo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="right"
+            android:text="50200055593062"
+            android:textAllCaps="true"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:id="@+id/llBankIfsc"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/ifscCode"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvIfscCode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="right"
+            android:text="HDFC0000021"
+            android:textAllCaps="true"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/accountType"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvAccountType"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="right"
+            android:text="@string/current"
+            android:textAllCaps="true"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_30sdp"
+        android:orientation="horizontal"
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/branch"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvBranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="right"
+            android:text="Hyderabad"
+            android:textAllCaps="true"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/payToNeft"
+        android:textColor="@color/red"
+        android:textSize="@dimen/_12sdp" />
+
+    <EditText
+        android:id="@+id/etReferenceNumber"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:background="@drawable/et_rectangular_border"
+        android:fontFamily="@font/fira_sans_regular"
+        android:hint="@string/enterReferenceNumber"
+        android:paddingStart="@dimen/_10sdp"
+        android:paddingEnd="@dimen/_10sdp"
+        android:singleLine="true"
+        android:textAlignment="viewStart"
+        android:textColor="@color/textBlack"
+        android:textColorHint="@color/textGrey"
+        android:textSize="@dimen/_13sdp"
+        tools:ignore="RtlSymmetry,SpUsage" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_20sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_20sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

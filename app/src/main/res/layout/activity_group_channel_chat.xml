@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ToolBarStyle"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:popupTheme="@style/Theme.HathMe" />
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header_group_chat"/>
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerview_chat"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:paddingBottom="5dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/chat_input_view"
+        app:layout_constraintTop_toBottomOf="@+id/header"
+        app:stackFromEnd="true" />
+
+    <com.sendbird.chat.module.ui.ChatInputView
+        android:id="@+id/chat_input_view"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:button_text="@string/send"
+        app:layout_constraintBottom_toBottomOf="parent" />
+    
+</androidx.constraintlayout.widget.ConstraintLayout>

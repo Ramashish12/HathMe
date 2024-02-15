@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="code.basic.OtpActivity"
+    tools:ignore="SpUsage">
+
+    <ImageView
+        android:id="@+id/ivTop"
+        android:layout_width="@dimen/_220sdp"
+        android:layout_height="@dimen/_220sdp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:src="@mipmap/login_top" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ivTop"
+        android:orientation="vertical"
+        android:padding="@dimen/_15sdp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/enterOtp"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_15sdp" />
+
+        <TextView
+            android:id="@+id/tvMsg"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="An OTP as been sent to your registered mobile number 6789xxxxxx"
+            android:textColor="@color/textGrey"
+            android:textSize="@dimen/_10sdp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginBottom="@dimen/_10sdp"
+            android:orientation="horizontal">
+
+            <EditText
+                android:id="@+id/etOtp1"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fira_sans_regular"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/etOtp2"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/etOtp3"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/etOtp4"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/etOtp5"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+            <EditText
+                android:id="@+id/etOtp6"
+                android:layout_width="@dimen/_40sdp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_8sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:gravity="center"
+                android:inputType="number"
+                android:maxLength="1" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="In case you have not received it"
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/tvResendOtp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_5sdp"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="@string/resendOtp"
+            android:textColor="@color/blue"
+            android:textSize="@dimen/_12sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvContinue"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/continuee"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp" />
+
+</RelativeLayout>

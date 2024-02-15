@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/llMain"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_centerHorizontal="true"
+    android:layout_gravity="center"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:paddingTop="@dimen/_20sdp"
+    tools:ignore="SpUsage">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="@dimen/_200sdp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="center"
+            android:text="@string/scratchCardClaim"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_16sdp" />
+
+        <RelativeLayout
+            android:layout_width="@dimen/_160sdp"
+            android:layout_height="@dimen/_150sdp"
+            android:background="@drawable/rectangular_grey_dark">
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/_10sdp">
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/fira_sans_sem_bold"
+                    android:gravity="center"
+                    android:text="@string/congratulation"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_18sdp" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv1"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:fontFamily="@font/fira_sans_sem_bold"
+                    android:text="@string/youEarned"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_13sdp" />
+
+                <RelativeLayout
+                    android:id="@+id/rlAmount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tv2">
+
+                    <TextView
+                        android:id="@+id/tvAmount"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_10sdp"
+                        android:layout_toStartOf="@+id/iv1"
+                        android:fontFamily="@font/fira_sans_sem_bold"
+                        android:text="@string/earned"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/_13sdp" />
+
+                    <ImageView
+                        android:id="@+id/iv1"
+                        android:layout_width="@dimen/_24sdp"
+                        android:layout_height="@dimen/_24sdp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/tvWorth"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/rlAmount"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginTop="@dimen/_5sdp"
+                    android:layout_marginEnd="@dimen/_10sdp"
+                    android:fontFamily="@font/fira_sans_sem_bold"
+                    android:text="@string/earned"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/_11sdp" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvType"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/rl1"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:fontFamily="@font/fira_sans_sem_bold"
+                android:text="@string/earned"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_13sdp" />
+
+            <com.anupkumarpanwar.scratchview.ScratchView
+                android:id="@+id/scratchView"
+                android:layout_width="@dimen/_160sdp"
+                android:layout_height="@dimen/_150sdp"
+                android:background="@null"
+                app:overlay_height="@dimen/_150sdp"
+                app:overlay_image="@mipmap/scratch_image"
+                app:overlay_width="@dimen/_160sdp"
+                app:tile_mode="CLAMP" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvClaimed"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_25sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_regular"
+        android:gravity="center"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/close"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_13sdp"
+        android:visibility="visible" />
+
+</RelativeLayout>

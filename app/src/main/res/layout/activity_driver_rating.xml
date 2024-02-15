@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="code.activity.DriverRatingActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="@dimen/_6sdp"
+            android:paddingBottom="@dimen/_4sdp"
+            >
+
+            <ImageView
+                android:id="@+id/ivBack"
+                android:layout_width="@dimen/_36sdp"
+                android:layout_height="@dimen/_22sdp"
+                android:layout_gravity="center"
+                android:src="@drawable/ic_back" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tvStoreName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:text="@string/rateYourDelivery"
+                    android:textColor="@color/textBlack"
+                    android:textSize="@dimen/_13sdp" />
+
+                <TextView
+                    android:id="@+id/tvItemCount"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/_2sdp"
+                    android:fontFamily="@font/fira_sans_regular"
+                    android:text=""
+                    android:visibility="visible"
+                    android:textColor="@color/textGrey"
+                    android:textSize="@dimen/_11sdp" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_1sdp"
+            android:background="@color/bg_grey" />
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_60sdp">
+            <TextView
+                android:id="@+id/tvRateDeliveryTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/fira_sans_medium"
+                android:text="@string/rateYourDelivery"
+                android:textColor="@color/textGrey"
+                android:textSize="@dimen/_11sdp" />
+            <View
+                android:layout_width="@dimen/_50sdp"
+                android:layout_height="@dimen/_2sdp"
+                android:layout_below="@id/tvRateDeliveryTitle"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@color/blue" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tvDeliveryBoyName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="@string/rateYourDelivery"
+            android:textColor="@color/textBlack"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/_30sdp"
+            android:textSize="@dimen/_13sdp" />
+        <RatingBar
+            android:id="@+id/ratingBar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_15sdp"
+            android:layout_marginBottom="@dimen/_5sdp"
+            android:progressTint="@color/golden"
+            android:secondaryProgressTint="@color/golden"
+            android:layout_gravity="center"
+            android:stepSize="1"
+            android:clickable="true"
+             />
+        <ImageView
+            android:id="@+id/ivImage"
+            android:layout_width="@dimen/_180sdp"
+            android:layout_height="@dimen/_180sdp"
+            android:src="@drawable/driver"
+            android:layout_gravity="center"
+             />
+    </LinearLayout>
+</RelativeLayout>

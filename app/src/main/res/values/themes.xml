@@ -1,0 +1,140 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.HathMe" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:forceDarkAllowed" tools:targetApi="q">false</item>
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/green</item>
+        <item name="colorPrimaryVariant">@color/green</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/teal_200</item>
+        <item name="colorSecondaryVariant">@color/teal_700</item>
+        <item name="colorOnSecondary">@color/black</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/colorPrimary</item>
+        <item name="popupMenuStyle">@style/MainActionBar.Popup</item>
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="CustomBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle</item>
+        <item name="materialThemeOverlay">@style/ButtonStyleTextColorGrey</item>
+    </style>
+
+    <style name="CustomBottomSheetStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@android:color/transparent</item>
+    </style>
+
+    <style name="ButtonStyleTextColorGrey">
+        <item name="colorPrimary">@color/white</item>
+    </style>
+
+
+    <style name="textInputLayoutStyle" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+        <item name="boxStrokeColor">@color/colorPrimary</item>
+        <item name="boxStrokeWidth">2dp</item>
+    </style>
+
+    <style name="CallTheme" parent="Theme.HathMe">
+        <item name="android:windowBackground">@color/callBackground</item>
+    </style>
+
+    <style name="AppTheme2" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/color_white</item>
+    </style>
+
+    <style name="AppTheme1" parent="Theme.MaterialComponents.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorTheme</item>
+        <item name="android:fontFamily">@font/fira_sans_regular</item>
+        <item name="bottomSheetDialogTheme">@style/AppBottomSheetDialogTheme</item>
+        <item name="android:windowBackground">@color/colorPrimary</item>
+        <item name="textAppearanceSmallPopupMenu">@style/myPopupMenuTextAppearance</item>
+        <item name="popupMenuStyle">@style/MainActionBar.Popup</item>
+
+    </style>
+
+    <style name="AppBottomSheetDialogTheme" parent="Theme.Design.Light.BottomSheetDialog">
+
+        <item name="bottomSheetStyle">@style/AppModalStyle</item>
+
+    </style>
+
+    <style name="AppModalStyle" parent="Widget.Design.BottomSheet.Modal">
+        <item name="android:background">@drawable/bg_bottom_sheet</item>
+        <item name="android:windowSoftInputMode">adjustPan</item>
+
+    </style>
+
+    <style name="myPopupMenuTextAppearance" parent="@android:style/TextAppearance.DeviceDefault.Widget.PopupMenu.Small">
+        <item name="android:textColor">@color/light_white</item>
+        <item name="android:textSize">12sp</item>
+        <item name="fontFamily">@font/fira_sans_regular</item>
+    </style>
+
+    <style name="MainActionBar.Popup" parent="ThemeOverlay.AppCompat.Light">
+        <item name="android:popupBackground">@color/colorPrimary</item>
+        <item name="android:textColor">@color/light_white</item>
+        <item name="itemTextAppearance">@style/myPopupMenuTextAppearance</item>
+    </style>
+
+    <style name="Progressbar_style" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="colorAccent">@color/app_color</item>
+    </style>
+
+    <style name="FullScreen" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowContentOverlay">@null</item>
+    </style>
+
+
+    <style name="ClickableView">
+        <item name="android:clickable">true</item>
+        <item name="android:focusable">true</item>
+        <item name="android:background">?android:attr/selectableItemBackgroundBorderless</item>
+    </style>
+
+
+    <style name="AppCompatAlertDialogStyleBig" parent="Theme.AppCompat.Light.Dialog.Alert">
+        <item name="android:windowMinWidthMajor">90%</item>
+        <item name="android:windowMinWidthMinor">90%</item>
+        <item name="android:windowAnimationStyle">@style/AnimationDialogWindow1</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:backgroundDimAmount">0.8</item>
+    </style>
+
+    <style name="AnimationDialogWindow1">
+        <item name="android:windowEnterAnimation">@anim/dialog_in</item>
+        <item name="android:windowExitAnimation">@anim/dialog_out</item>
+    </style>
+
+    <style name="logout_button">
+        <item name="android:layout_height">@dimen/_40sdp</item>
+
+        <item name="android:background">@drawable/bg_select_btn</item>
+        <item name="android:textSize">@dimen/_10sdp</item>
+
+    </style>
+    <!-- Base application theme. -->
+    <style name="Base.Theme.HathMe" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your light theme here. -->
+        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+    </style>
+
+
+    <!--    <style name="AppBottomSheetDialogTheme" parent="Theme.MaterialComponents.Light.BottomSheetDialog" >-->
+    <!--        <item name="bottomSheetStyle">@style/CustomBottomSheetStyle1</item>-->
+    <!--    </style>-->
+
+    <!--    <style name="CustomBottomSheetStyle1" parent="Widget.Design.BottomSheet.Modal" >-->
+    <!--        <item name="android:background">@drawable/bg_dlg</item>-->
+    <!--    </style>-->
+
+</resources>

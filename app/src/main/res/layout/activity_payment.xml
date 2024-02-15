@@ -1,0 +1,221 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="code.activity.PaymentActivity"
+    tools:ignore="SpUsage">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <TextView
+        android:id="@+id/tv1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/header"
+        android:layout_margin="@dimen/_10sdp"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/select_payment_mode"
+        android:textColor="@color/textBlack" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv1"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/rlGp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/et_rectangular_border"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/ivRadioGp"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_radio_button_unchecked" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toStartOf="@+id/ivInfoGp"
+                android:layout_toEndOf="@+id/ivRadioGp"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:text="@string/gp"
+                    android:textColor="@color/textBlack" />
+
+                <TextView
+                    android:id="@+id/tvAvailableGp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:textColor="@color/text_grey" />
+
+                <TextView
+                    android:id="@+id/tvCurrentGpValue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:textColor="@color/text_grey" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/ivInfoGp"
+                android:layout_width="@dimen/_12sdp"
+                android:layout_height="@dimen/_12sdp"
+                android:layout_alignParentEnd="true"
+                android:src="@drawable/ic_info" />
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/rlWallet"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/et_rectangular_border"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/ivRadioWallet"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_radio_button_unchecked" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/ivRadioWallet"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:text="@string/wallet"
+                    android:textColor="@color/textBlack" />
+
+                <TextView
+                    android:id="@+id/tvWalletBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:textColor="@color/text_grey" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/rlCash"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:background="@drawable/et_rectangular_border"
+            android:padding="@dimen/_8sdp">
+
+            <ImageView
+                android:id="@+id/ivRadioCash"
+                android:layout_width="@dimen/_16sdp"
+                android:layout_height="@dimen/_16sdp"
+                android:layout_alignParentStart="true"
+                android:src="@drawable/ic_radio_button_unchecked" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_toEndOf="@+id/ivRadioCash"
+                android:orientation="vertical">
+
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_medium"
+                    android:text="@string/cash"
+                    android:textColor="@color/textBlack" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="#33C4C4C4"
+        android:padding="@dimen/_5sdp">
+
+        <TextView
+            android:id="@+id/tvTotalAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:fontFamily="@font/fira_sans_medium"
+            android:text="Total Amount : "
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_13sdp" />
+
+        <TextView
+            android:id="@+id/tvSelectedPaymentModes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvTotalAmount"
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text=""
+            android:textColor="@color/textBlack"
+            android:textSize="@dimen/_10sdp"
+            android:visibility="gone" />
+
+
+        <TextView
+            android:id="@+id/tvProceed"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:background="@drawable/btn_rectangular_less_radius"
+            android:fontFamily="@font/fira_sans_medium"
+            android:gravity="center"
+            android:padding="@dimen/_5sdp"
+            android:text="@string/proceed"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_13sdp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

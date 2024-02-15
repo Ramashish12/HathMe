@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="horizontal"
+    android:paddingTop="@dimen/_10sdp"
+    android:paddingBottom="@dimen/_10sdp">
+<RadioButton
+    android:layout_width="@dimen/_26sdp"
+    android:layout_height="@dimen/_20sdp"
+    android:buttonTint="@color/purple_700"
+    android:backgroundTint="@color/gray"
+    android:drawableTint="@color/gray"
+    android:id="@+id/reportBtn"/>
+    <TextView
+        android:id="@+id/tvReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fira_sans_regular"
+        android:maxLines="2"
+        android:text="@string/description"
+        android:layout_marginStart="@dimen/_5sdp"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_11sdp" />
+</LinearLayout>
+

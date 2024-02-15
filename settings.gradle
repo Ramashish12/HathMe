@@ -1,0 +1,26 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://storage.zego.im/maven' }
+        mavenCentral()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        jcenter() // Warning: this repository is going to shut down soon
+        mavenLocal()
+        maven { url 'https://jitpack.io' }
+        maven { url 'https://storage.zego.im/maven' }
+        maven { url "https://repo.sendbird.com/public/maven" }
+
+    }
+
+}
+rootProject.name = "HathMe"
+include ':app'
+include ':commonmodule'

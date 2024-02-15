@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <solid android:color="#FF0000"/> <!-- Replace #FF0000 with the desired color for the dot -->
+    <size android:width="8dp" android:height="8dp"/> <!-- Adjust the width and height as per your preference -->
+    <corners android:radius="4dp"/> <!-- Adjust the radius to create rounded corners, if desired -->
+</shape>

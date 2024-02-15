@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_5sdp"
+    android:background="@color/colorPrimary">
+    <ImageView
+        android:id="@+id/ivBack"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:paddingLeft="5dp"
+        android:layout_centerVertical="true"
+        android:src="@drawable/ic_back" />
+    <TextView
+        android:id="@+id/tvHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_13sdp"
+        android:layout_centerVertical="true"
+        android:textColor="@color/textBlack"
+        android:layout_centerInParent="true"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        tools:ignore="SpUsage" />
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:id="@+id/rlGoLive"
+        android:layout_marginRight="@dimen/_5sdp"
+        android:layout_alignParentEnd="true">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="@dimen/_30sdp"
+            android:layout_height="@dimen/_30sdp"
+            app:civ_border_color="@color/red"
+            app:civ_border_width="2dp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/ic_play"
+            android:id="@+id/imgLoginUser"/>
+        <TextView
+            android:id="@+id/tvgolivetitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="9dp"
+            android:text="@string/live"
+            android:layout_below="@+id/imgLoginUser"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"
+            android:layout_marginTop="-11dp"
+            android:paddingStart="@dimen/_3sdp"
+            android:paddingEnd="@dimen/_3sdp"
+            android:textAllCaps="true"
+            android:background="@drawable/btnbackground"
+            android:fontFamily="@font/fira_sans_regular"
+            tools:ignore="SpUsage" />
+    </RelativeLayout>
+</RelativeLayout>

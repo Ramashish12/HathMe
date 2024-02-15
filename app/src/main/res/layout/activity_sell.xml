@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage"
+    android:layout_height="match_parent">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_25sdp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/balanceAmount"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/fira_sans_regular" />
+
+        <TextView
+            android:id="@+id/tvBalanceAmount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:textSize="@dimen/_11sdp"
+            android:fontFamily="@font/fira_sans_regular" />
+
+    </LinearLayout>
+
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/howMuchSell"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:textSize="@dimen/_11sdp"
+        android:fontFamily="@font/fira_sans_regular" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp">
+
+        <EditText
+            android:textAlignment="viewStart"
+            android:id="@+id/etInGyre"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_toStartOf="@+id/tvEqual"
+            android:background="@drawable/et_rectangular_border"
+            android:fontFamily="@font/fira_sans_regular"
+            android:inputType="number"
+            android:maxLength="10"
+            android:hint="@string/inGander"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/textBlack"
+            android:textColorHint="@color/textGrey"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="RtlSymmetry" />
+
+
+        <TextView
+            android:id="@+id/tvEqual"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="="
+            android:layout_marginStart="@dimen/_15sdp"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_13sdp"
+            android:layout_centerInParent="true" />
+
+        <EditText
+            android:textAlignment="viewStart"
+            android:id="@+id/etRupee"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_toEndOf="@+id/tvEqual"
+            android:background="@drawable/et_rectangular_border"
+            android:fontFamily="@font/fira_sans_regular"
+            android:hint="@string/inRupees"
+            android:enabled="false"
+            android:paddingStart="@dimen/_10sdp"
+            android:paddingEnd="@dimen/_10sdp"
+            android:singleLine="true"
+            android:textColor="@color/textBlack"
+            android:textColorHint="@color/textGrey"
+            android:textSize="@dimen/_13sdp"
+            tools:ignore="RtlSymmetry" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:orientation="horizontal"
+        android:weightSum="4">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn25Perc"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_26sdp"
+            android:gravity="center"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular_border_red"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="25%"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn50Perc"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_26sdp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular_border_red"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="50%"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn75Perc"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_26sdp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_marginEnd="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular_border_red"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="75%"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/btn100Perc"
+            android:layout_width="0dp"
+            android:layout_height="@dimen/_26sdp"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_8sdp"
+            android:layout_weight="1"
+            android:background="@drawable/rectangular_border_red"
+            android:backgroundTint="@color/blue"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="100%"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_9sdp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvFee"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/_10sdp"
+        android:textColor="@color/textGrey"
+        android:visibility="gone"
+        android:fontFamily="@font/fira_sans_regular"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:text="@string/fees" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_40sdp"
+        android:layout_marginStart="@dimen/_15sdp"
+        android:layout_marginEnd="@dimen/_15sdp"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/_140sdp"
+        android:layout_marginBottom="@dimen/_20sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/submit"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

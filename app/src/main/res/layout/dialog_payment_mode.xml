@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="@drawable/rectangular_top_radius"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:text="@string/paymentMode"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/tvCash"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/rectangular_border_less_radius"
+        android:fontFamily="@font/fira_sans_regular"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/cash"
+        android:textColor="@color/colorPrimary"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/tvWallet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/et_rectangular_border"
+        android:fontFamily="@font/fira_sans_regular"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/wallet"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/tvOnlinePayment"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_15sdp"
+        android:background="@drawable/et_rectangular_border"
+        android:fontFamily="@font/fira_sans_regular"
+        android:padding="@dimen/_10sdp"
+        android:text="@string/online"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_13sdp" />
+
+    <TextView
+        android:id="@+id/tvPlaceOrder"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_regular"
+        android:gravity="center"
+        android:padding="@dimen/_13sdp"
+        android:text="@string/placeOrder"
+        android:textAlignment="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

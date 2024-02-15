@@ -1,0 +1,131 @@
+{
+  "project_info": {
+    "project_number": "646709875520",
+    "firebase_url": "https://hathme-default-rtdb.firebaseio.com",
+    "project_id": "hathme",
+    "storage_bucket": "hathme.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646709875520:android:c25828ff73682521d4a0a5",
+        "android_client_info": {
+          "package_name": "com.hathme.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646709875520-72m9fvlb4aj0geu5a5tsadpd5ap0jjav.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hathme.android",
+            "certificate_hash": "5bca78b5bc83fd060f9f41a39be032559fb3b601"
+          }
+        },
+        {
+          "client_id": "646709875520-2rutnde9nvolgrhi1kcsa45pm5oemtlk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzRksF5pHcqI5CPFae3Gk5mQSmCJ0vSlE"
+        },
+        {
+          "current_key": "AIzaSyBc0Z_kaSfQmL6rwLxea5BGyy2hMmXxK48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646709875520-2rutnde9nvolgrhi1kcsa45pm5oemtlk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646709875520:android:3c6016cf74bea8f2d4a0a5",
+        "android_client_info": {
+          "package_name": "com.hathme.merchat.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646709875520-8ggcgatc3cfqgko6evn02ph9e7b7gg4q.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hathme.merchat.android",
+            "certificate_hash": "5bca78b5bc83fd060f9f41a39be032559fb3b601"
+          }
+        },
+        {
+          "client_id": "646709875520-2rutnde9nvolgrhi1kcsa45pm5oemtlk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzRksF5pHcqI5CPFae3Gk5mQSmCJ0vSlE"
+        },
+        {
+          "current_key": "AIzaSyBc0Z_kaSfQmL6rwLxea5BGyy2hMmXxK48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646709875520-2rutnde9nvolgrhi1kcsa45pm5oemtlk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:646709875520:android:7a8f0de205efa612d4a0a5",
+        "android_client_info": {
+          "package_name": "com.hathmedeliveryagent.android"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "646709875520-06tp9msdu5l5q8psb6qupfg17soq9jfp.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.hathmedeliveryagent.android",
+            "certificate_hash": "5bca78b5bc83fd060f9f41a39be032559fb3b601"
+          }
+        },
+        {
+          "client_id": "646709875520-2rutnde9nvolgrhi1kcsa45pm5oemtlk.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzRksF5pHcqI5CPFae3Gk5mQSmCJ0vSlE"
+        },
+        {
+          "current_key": "AIzaSyBc0Z_kaSfQmL6rwLxea5BGyy2hMmXxK48"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "646709875520-2rutnde9nvolgrhi1kcsa45pm5oemtlk.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

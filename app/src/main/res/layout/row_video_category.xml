@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:background="@drawable/bg_category"
+    android:padding="@dimen/_3sdp"
+    android:id="@+id/rlBg"
+    android:layout_margin="@dimen/_3sdp"
+    android:layout_height="wrap_content">
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:id="@+id/tvCategory"
+       android:text="Add Video"
+       android:paddingLeft="@dimen/_10sdp"
+       android:paddingRight="@dimen/_10sdp"
+       android:paddingTop="@dimen/_3sdp"
+       android:textSize="@dimen/_10sdp"
+       android:fontFamily="@font/fira_sans_regular"
+       android:textColor="@color/black"
+       android:paddingBottom="@dimen/_3sdp"/>
+</RelativeLayout>

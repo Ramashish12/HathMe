@@ -1,0 +1,715 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tool="http://schemas.android.com/tools"
+    xmlns:tools="http://schemas.android.com/apk/distribution"
+    package="com.hathme.android">
+
+    <uses-feature
+        android:name="android.hardware.camera"
+        android:required="false" />
+    <uses-feature
+        android:name="android.hardware.telephony"
+        android:required="false" />
+    <uses-feature
+        android:glEsVersion="0x00020000"
+        android:required="false" />
+
+    <uses-permission
+        android:name="com.google.android.gms.permission.AD_ID"
+        tools:node="remove" />
+    <permission
+        android:name="com.hathme.android.permission.MAPS_RECEIVE"
+        android:protectionLevel="signature" />
+
+    <uses-feature android:name="android.permission.CAPTURE_AUDIO_OUTPUT"
+        android:required="false"/>
+
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    <uses-permission android:name="android.permission.FOREGROUND_SERVICE_MEDIA_PLAYBACK" />
+    <uses-permission android:name="android.permission.EXECUTE"
+        android:required="false"/>
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+
+    <uses-feature android:name="android.hardware.camera.autofocus"
+        android:required="false"/>
+
+    <uses-permission
+        android:name="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE"
+        tool:ignore="ProtectedPermissions" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <!--    <uses-permission android:name="com.android.vending.BILLING" />-->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MANAGE_OWN_CALLS" />
+    <uses-permission android:name="android.permission.CALL_PHONE" />
+    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM" />
+    <uses-permission android:name="android.permission.BLUETOOTH_CONNECT" />
+    <uses-permission android:name="com.android.providers.media.MediaProvider" />
+
+    <protected-broadcast android:name="android.intent.action.MEDIA_MOUNTED" />
+
+    <application
+        android:name="code.common.MyApplication"
+        android:allowBackup="true"
+        android:allowClearUserData="true"
+        android:fullBackupContent="false"
+        android:hardwareAccelerated="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:largeHeap="true"
+        android:requestLegacyExternalStorage="true"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.HathMe"
+        android:usesCleartextTraffic="true">
+        <meta-data
+            android:name="asset_statements"
+            android:resource="@string/asset_statements" />
+
+        <activity
+            android:name="code.activity.PaymentActivity"
+            android:exported="false" />
+
+        <activity
+            android:name="code.videoEditor.VideoOverviewActivity"
+            android:exported="false"
+            android:label="@string/title_activity_video_overview"
+            android:theme="@style/Theme.HathMe" />
+        <activity
+            android:name="code.activity.RateNowActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.DriverRatingActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.maplivetracking.LiveTrackingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HathMe" />
+        <activity
+            android:name="code.activity.RateAndReviewActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.BucketCouponListActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.BucketCartActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.RequestOrderDetailsActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.RequestOrderListActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.UploadOrderImageActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.activity.NotificationsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.SecurityPrivacyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.common.WebViewActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.groupvoicecall.room.InvitationListActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.groupchatting.groupchannel.InviteMembersListActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.groupvoicecall.room.SelectUserListActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.vediolist.VideoPlayerActivity"
+            android:exported="false"
+            android:screenOrientation="landscape" />
+        <activity
+            android:name="code.vediolist.ShortActivity"
+            android:exported="true"
+            android:launchMode="singleTask">
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/short"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/short"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/short"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/short"
+                    android:scheme="http" />
+            </intent-filter>
+        </activity> <!-- <activity -->
+        <!-- android:name="code.call.AudioVoiceCallActivity" -->
+        <!-- android:exported="false" /> -->
+        <activity
+            android:name="code.activity.SearchAllProductActivity"
+            android:exported="false" /> <!-- <activity -->
+        <!-- android:name="code.recordvideos.SortVideoActivity" -->
+        <!-- android:exported="false" -->
+        <!-- android:screenOrientation="portrait" /> -->
+        <activity
+            android:name="code.activity.ProductSearchActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.groupchatting.groupchannel.ChatMemberListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.groupchatting.groupchannel.SelectUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.groupchatting.groupchannel.GroupChannelChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sendbird.chat.module.ui.base.BaseUserInfoActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="com.sendbird.chat.module.ui.base.BaseSignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.vediolist.VideoDetailsActivity"
+            android:exported="true"
+            android:launchMode="singleTask"
+            android:theme="@style/Theme.HathMe">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/v1"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/v1"
+                    android:scheme="https" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/v1"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="www.hathme.com"
+                    android:pathPrefix="/v1"
+                    android:scheme="http" />
+            </intent-filter>
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="api.hathme.com"
+                    android:pathPrefix="/v1"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="code.vediolist.YourVideoActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HathMe" />
+        <activity
+            android:name="code.vediolist.SubscriptionActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HathMe" />
+        <activity
+            android:name="code.vediolist.WatchLaterActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HathMe" />
+        <activity
+            android:name="code.vediolist.VideoHistoryActivity"
+            android:exported="false"
+            android:theme="@style/Theme.HathMe" />
+        <activity
+            android:name="code.groupvoicecall.preview.PreviewActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.groupvoicecall.room.RoomActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.groupvoicecall.main.GroupVoiceCallActivity"
+            android:exported="false" />
+        <activity
+            android:name="code.livestreaming.LiveListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.livestreaming.LiveActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.vediolist.VideoListsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.vediolist.DownloadsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.chat.ChatListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.ForgotWithdrawalPinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.WithdrawalPinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.CreateWithdrawalPinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            android:theme="@style/Theme.HathMe">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.SendReceiveMoneyActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.WithdrawalAmountActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.chat.ChatActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.SoicalActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.RewardsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.FavoriteActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.HelpSupportActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.SellActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.RateUserActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.ImageViewerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.VideoPlayerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.ShowPdfActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="code.activity.ZoomingImageActivity"
+            android:exported="false"
+            android:screenOrientation="portrait"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="code.activity.IncomingCallActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.DepositActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.UpiActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.NeftActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.AddAmountActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.AddBankActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.activity.BankListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name="code.basic.SplashActivity"
+            android:exported="true"
+            android:screenOrientation="portrait">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+            <intent-filter android:autoVerify="true">
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="hathme.com"
+                    android:pathPrefix="/merchant"
+                    android:scheme="https" />
+            </intent-filter>
+
+        </activity>
+        <activity
+            android:name="code.basic.SignUpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.OrderDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.OrderHistoryActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.OrderTransactionActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.CouponListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.AddressListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.AddressActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.FriendRequestListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.FriendListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.ProfileSettingsActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.AudioPlayerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.UserVerificationActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.UpdateProfileActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.CartActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.ItemDetailActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.StoreActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.StoreListActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.CategoriesActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.EnterPinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.GeneratePinActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.OtpActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.ForgotPasswordActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.LoginActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.RegisterActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.basic.LoginTypeActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.MainActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.activity.WalletActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.call.CallHistoryActivity"
+            android:exported="true"
+            android:screenOrientation="portrait" />
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDTAyrOge4-B9kR32N5dfAQoNBJrD5bUeg" />
+
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/provider_paths"
+                tool:replace="android:resource" />
+        </provider>
+
+        <activity
+            android:name="code.videoEditor.VideoEditorActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name="code.common.QrCodeScannerActivity"
+            android:exported="false"
+            android:screenOrientation="portrait" />
+
+        <service
+            android:name="code.common.FirebaseMessageService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+        <service
+            android:name="code.call.CallService"
+            android:enabled="true"
+            android:exported="true"
+            android:foregroundServiceType="mediaPlayback"
+            android:stopWithTask="false">
+            <property
+                android:name="android.app.FOREGROUND_SERVICE_MEDIA_PLAYBACK"
+                android:value="test" />
+        </service> <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_channel_id" -->
+        <!-- android:value="@string/default_notification_channel_id" /> -->
+        <!-- <meta-data -->
+        <!-- android:name="com.google.firebase.messaging.default_notification_channel_name" -->
+        <!-- android:value="@string/default_notification_channel_name" /> -->
+        <activity
+            android:name="code.call.VideoCallActivity"
+            android:configChanges="orientation|smallestScreenSize|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/CallTheme"
+            tools:ignore="LockedOrientationActivity" />
+        <activity
+            android:name="code.call.VoiceCallActivity"
+            android:configChanges="orientation|smallestScreenSize|screenSize|screenLayout"
+            android:screenOrientation="portrait"
+            android:theme="@style/CallTheme"
+            tools:ignore="LockedOrientationActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

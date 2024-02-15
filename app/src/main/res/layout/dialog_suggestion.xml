@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="@drawable/rectangular_top_radius"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:ignore="SpUsage">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/fira_sans_sem_bold"
+            android:text="@string/writeSuggestion"
+            android:textColor="@color/textBlack"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:textSize="@dimen/_13sdp" />
+
+        <ImageView
+            android:id="@+id/ivClose"
+            android:layout_width="@dimen/_24sdp"
+            android:layout_height="@dimen/_24sdp"
+            android:src="@drawable/ic_clear"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true" />
+
+    </RelativeLayout>
+
+    <EditText
+        android:id="@+id/etSuggestion"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_100sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="top|start"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/et_rectangular_border"
+        android:fontFamily="@font/fira_sans_regular"
+        android:hint="@string/writeSuggestion"
+        android:inputType="textCapSentences"
+        android:maxLength="250"
+        android:padding="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvSubmit"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_45sdp"
+        android:layout_marginLeft="@dimen/_30sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_30sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rectangular"
+        android:gravity="center"
+        android:padding="@dimen/_13sdp"
+        android:text="@string/submit"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

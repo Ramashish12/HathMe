@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <ImageView
+        android:layout_width="@dimen/_45sdp"
+        android:layout_height="@dimen/_45sdp"
+        android:src="@drawable/play"
+        android:layout_centerInParent="true"
+        android:elevation="@dimen/_1sdp"
+        android:visibility="gone"
+        android:id="@+id/ivPlay"/>
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#000">
+        <VideoView
+            android:id="@+id/videoView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0" />
+        <ProgressBar
+            android:id="@+id/videoProgressBar"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_10sdp"
+
+            android:layout_marginBottom="@dimen/_5sdp">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProfileImage"
+                android:layout_width="@dimen/_35sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginStart="3dp"
+                app:civ_border_width="1dp"
+                app:civ_border_color="@color/gray"
+                android:src="@drawable/ic_user_default" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:layout_toEndOf="@+id/ivProfileImage"
+                android:orientation="vertical">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/white"
+                    android:id="@+id/tvName"
+                    android:maxLines="1"
+                    android:textSize="@dimen/_14sdp"
+                    android:fontFamily="@font/fira_sans_regular"
+                    android:text="descriptions"
+                    />
+
+            </LinearLayout>
+
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/textVideoTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Header Text"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:textStyle="bold" />
+        <TextView
+            android:id="@+id/textVideoDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="This is Description"
+            android:layout_marginTop="5dp"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_11sdp" />
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="110dp"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:layout_marginEnd="15dp"
+        android:orientation="vertical"
+        android:layout_alignParentEnd="true">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/ivLike"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/thumblike"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Like"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ivLike"
+                android:textColor="@color/white"
+                android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/ivDisLike"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/thumbdislike"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Dislike"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ivDisLike"
+                android:textColor="@color/white"
+                android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/ivComment"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/baseline_message_24"
+                app:tint="@color/white" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="0"
+                android:id="@+id/tvCommentCount"
+                android:layout_centerHorizontal="true"
+                android:layout_below="@+id/ivComment"
+                android:textColor="@color/white"
+                android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+            <ImageView
+                android:layout_width="28dp"
+                android:layout_height="28dp"
+                android:id="@+id/ivShare"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/share_1"
+                app:tint="@color/white" />
+             <TextView
+                 android:layout_width="wrap_content"
+                 android:layout_height="wrap_content"
+                 android:text="Share"
+                 android:layout_centerHorizontal="true"
+                 android:layout_below="@+id/ivShare"
+                 android:textColor="@color/white"
+                 android:layout_marginTop="3dp"/>
+        </RelativeLayout>
+
+    </LinearLayout>
+</RelativeLayout>

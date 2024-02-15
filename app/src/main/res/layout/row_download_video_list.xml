@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="@dimen/_8sdp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <androidx.cardview.widget.CardView
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_70sdp"
+            app:cardElevation="@dimen/_2sdp"
+            app:cardMaxElevation="@dimen/_2sdp"
+            app:cardCornerRadius="@dimen/_4sdp"
+            android:id="@+id/cardThumb"
+            >
+            <ImageView
+                android:id="@+id/ivThumb"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="fitXY"
+                android:src="@drawable/noimagefound"
+                />
+        </androidx.cardview.widget.CardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/_5sdp"
+            android:paddingRight="@dimen/_5sdp"
+            android:orientation="vertical"
+            android:layout_toRightOf="@+id/cardThumb">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/rlTitle">
+
+                <TextView
+                    android:id="@+id/tvDesc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/fira_sans_regular"
+                    android:maxLines="3"
+                    android:layout_marginEnd="@dimen/_5sdp"
+                    android:layout_toStartOf="@+id/ivMenu"
+                    android:text="descriptions"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/_15sdp" />
+
+                <ImageView
+                    android:id="@+id/ivMenu"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:visibility="gone"
+                    android:src="@drawable/ic_menus" />
+            </RelativeLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/graybold"
+                android:id="@+id/tvTitle"
+                android:visibility="gone"
+                android:textSize="@dimen/_10sdp"
+                android:maxLines="3"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="descriptions"
+                />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/graybold"
+                android:id="@+id/tvViewCount"
+                android:textSize="@dimen/_10sdp"
+                android:maxLines="1"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text="descriptions"
+                />
+        </LinearLayout>
+    </RelativeLayout>
+</RelativeLayout>

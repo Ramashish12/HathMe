@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/unsubscribe"
+        android:orderInCategory="200"
+        android:title="@string/unsubscribe"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/hide"
+        android:orderInCategory="200"
+        android:title="@string/hide"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/share"
+        android:orderInCategory="200"
+        android:title="@string/share"
+        app:showAsAction="never" />
+
+
+</menu>

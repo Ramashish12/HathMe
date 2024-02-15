@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage"
+    tools:context="code.activity.BankListActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never"
+        android:layout_below="@+id/header"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:orientation="vertical" />
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fabAdd"
+        android:layout_width="wrap_content"
+        android:backgroundTint="@color/colorPrimary"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_plus"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvWithdraw"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_40sdp"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_alignParentBottom="true"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/withdraw"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp"/>
+
+</RelativeLayout>

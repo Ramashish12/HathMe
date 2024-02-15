@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rectangular_top_radius"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/noAddressSelected"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_15sdp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:text="@string/youHaveNotAddedAddress"
+        android:textColor="@color/text_grey"
+        android:textSize="@dimen/_13sdp" />
+
+
+
+    <TextView
+        android:id="@+id/tvAddAddress"
+        android:layout_width="@dimen/_140sdp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_20sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:background="@drawable/btn_rectangular"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:gravity="center"
+        android:padding="@dimen/_8sdp"
+        android:text="@string/addAddress"
+        android:textColor="@color/black"
+        android:textSize="@dimen/_13sdp" />
+
+</LinearLayout>

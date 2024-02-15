@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/_10sdp"
+    android:layout_marginEnd="@dimen/_10sdp"
+    android:background="@drawable/rectangular_top_radius"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fira_sans_sem_bold"
+        android:text="@string/selectLocation"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_13sdp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rectangular_white"
+        android:elevation="@dimen/_2sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginBottom="@dimen/_10sdp"
+        android:layout_marginStart="@dimen/_3sdp"
+        android:layout_marginEnd="@dimen/_3sdp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_search"
+            app:tint="@color/colorPrimary" />
+
+        <EditText
+            android:id="@+id/etSearch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/fira_sans_regular"
+            android:maxLength="25"
+            android:inputType="textCapSentences"
+            android:background="@null" />
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlCurrentLocation"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/ivGps"
+            android:layout_width="@dimen/_12sdp"
+            android:layout_height="@dimen/_12sdp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:src="@drawable/ic_gps" />
+
+        <TextView
+            android:id="@+id/tvUse"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/useCurrentLocation"
+            android:textColor="@color/red"
+            android:layout_toEndOf="@+id/ivGps"
+            android:textSize="@dimen/_13sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/fira_sans_regular" />
+
+        <TextView
+            android:id="@+id/tvAreaCity"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/tvUse"
+            android:text="@string/useCurrentLocation"
+            android:textColor="@color/textBlack"
+            android:layout_toEndOf="@+id/ivGps"
+            android:textSize="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:fontFamily="@font/fira_sans_regular" />
+
+        <ImageView
+            android:layout_width="@dimen/_14sdp"
+            android:layout_height="@dimen/_14sdp"
+            android:src="@drawable/ic_arrow_up"
+            android:rotation="90"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true" />
+
+    </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rvList"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never" />
+
+</LinearLayout>

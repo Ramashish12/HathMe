@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:ignore="SpUsage"
+    tools:context="code.basic.LoginTypeActivity">
+
+    <androidx.viewpager.widget.ViewPager
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/llBottom"
+        android:layout_alignParentTop="true" />
+
+    <LinearLayout
+        android:id="@+id/llSlidersDot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/_60sdp"
+        android:gravity="center"
+        android:layout_above="@+id/llBottom"
+        android:orientation="horizontal" />
+
+    <LinearLayout
+        android:id="@+id/llBottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/_1sdp"
+        android:background="@color/colorPrimary"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvLogin"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:text="@string/login"
+            android:fontFamily="@font/fira_sans_regular"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+        <TextView
+            android:id="@+id/tvSignUp"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/_10sdp"
+            android:background="@color/white"
+            android:text="@string/skip"
+            android:fontFamily="@font/fira_sans_regular"
+            android:textSize="@dimen/_15sdp"
+            android:textColor="@color/black"
+            android:gravity="center" />
+
+    </LinearLayout>
+
+</RelativeLayout>

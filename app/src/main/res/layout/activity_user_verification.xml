@@ -1,0 +1,313 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage"
+    tools:context="code.activity.UserVerificationActivity">
+
+<!--    <LinearLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:orientation="horizontal"-->
+<!--        android:padding="@dimen/_10sdp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/ivBack"-->
+<!--            android:layout_width="@dimen/_24sdp"-->
+<!--            android:layout_height="@dimen/_24sdp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:src="@drawable/ic_back" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginStart="@dimen/_10sdp"-->
+<!--            android:fontFamily="@font/fira_sans_medium"-->
+<!--            android:text="@string/userVerification"-->
+<!--            android:textColor="@color/textBlack"-->
+<!--            android:textSize="@dimen/_13sdp" />-->
+
+<!--    </LinearLayout>-->
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:layout_height="wrap_content">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/userVerification"
+                    android:textSize="@dimen/_13sdp"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/textBlack"
+                    android:fontFamily="@font/fira_sans_medium" />
+                <TextView
+                    android:id="@+id/tvStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/fira_sans_regular"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/_11sdp" />
+            </RelativeLayout>
+
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="@string/fullName">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etFullName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLength="150"
+                    android:padding="@dimen/_12sdp"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                app:startIconDrawable="@mipmap/calender"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="@string/dob">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etDob"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapSentences"
+                    android:maxLength="100"
+                    android:clickable="false"
+                    android:cursorVisible="false"
+                    android:focusable="false"
+                    android:padding="@dimen/_12sdp"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="@string/panCard">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPanCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="textCapWords"
+                    android:maxLength="10"
+                    android:textAllCaps="true"
+                    android:padding="@dimen/_12sdp"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/panCardFrontPicture"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_25sdp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/fira_sans_medium" />
+
+            <RelativeLayout
+                android:id="@+id/rlPanCard"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="#33C4C4C4"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/iv1"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textBlack"
+                    android:layout_below="@+id/iv1"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/fira_sans_medium" />
+
+
+                <ImageView
+                    android:id="@+id/ivPanCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                style="@style/textInputLayoutStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginEnd="@dimen/_10sdp"
+                android:hint="@string/aadharCard">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etAadharCard"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="number"
+                    android:maxLength="12"
+                    android:padding="@dimen/_12sdp"
+                    android:text="" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aadharFrontPicture"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/fira_sans_medium" />
+
+            <RelativeLayout
+                android:id="@+id/rlAadharFront"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="#33C4C4C4"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/iv2"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textBlack"
+                    android:layout_below="@+id/iv2"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/fira_sans_medium" />
+
+
+                <ImageView
+                    android:id="@+id/ivAadharCardFront"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/aadharBackPicture"
+                android:textSize="@dimen/_13sdp"
+                android:layout_marginStart="@dimen/_10sdp"
+                android:layout_marginTop="@dimen/_15sdp"
+                android:textColor="@color/textBlack"
+                android:fontFamily="@font/fira_sans_medium" />
+
+            <RelativeLayout
+                android:id="@+id/rlAadharBack"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_140sdp"
+                android:background="#33C4C4C4"
+                android:layout_margin="@dimen/_10sdp">
+
+                <ImageView
+                    android:id="@+id/iv3"
+                    android:layout_width="@dimen/_24sdp"
+                    android:layout_height="@dimen/_24sdp"
+                    android:layout_centerHorizontal="true"
+                    android:layout_marginTop="@dimen/_45sdp"
+                    android:src="@drawable/ic_camera" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/upload"
+                    android:textSize="@dimen/_13sdp"
+                    android:textColor="@color/textBlack"
+                    android:layout_below="@+id/iv3"
+                    android:layout_centerHorizontal="true"
+                    android:fontFamily="@font/fira_sans_medium" />
+
+
+                <ImageView
+                    android:id="@+id/ivAadharCardBack"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scaleType="fitXY" />
+
+            </RelativeLayout>
+
+            <TextView
+                android:id="@+id/tvSave"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_40sdp"
+                android:layout_marginBottom="@dimen/_10sdp"
+                android:layout_gravity="center"
+                android:background="@drawable/btn_rectangular"
+                android:fontFamily="@font/fira_sans_sem_bold"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:padding="@dimen/_8sdp"
+                android:text="@string/save"
+                android:layout_marginStart="@dimen/_15sdp"
+                android:layout_marginEnd="@dimen/_15sdp"
+                android:textColor="@color/black"
+                android:textSize="@dimen/_13sdp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>

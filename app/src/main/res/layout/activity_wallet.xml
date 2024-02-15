@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:ignore="SpUsage"
+    tools:context="code.activity.WalletActivity">
+
+    <include
+        android:id="@+id/header"
+        layout="@layout/inflate_header" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn_rectangular_white"
+        android:elevation="@dimen/_3sdp"
+        android:padding="@dimen/_10sdp"
+        android:layout_margin="@dimen/_10sdp">
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/hathMeBalance"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/fira_sans_medium" />
+
+        <TextView
+            android:id="@+id/tvBalance"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:layout_below="@+id/tv1"
+            android:textSize="@dimen/_15sdp"
+            android:layout_alignParentStart="true"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/fira_sans_medium" />
+
+        <ImageView
+            android:layout_width="@dimen/_20sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:layout_alignParentEnd="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_wallet_grey" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:weightSum="2">
+
+        <TextView
+            android:id="@+id/tvAddMoney"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="2"
+            android:text="@string/addMoney"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:elevation="@dimen/_3sdp"
+            android:backgroundTint="@color/redDark"
+            android:fontFamily="@font/fira_sans_medium"
+            android:background="@drawable/btn_rectangular_green" />
+
+
+        <TextView
+            android:id="@+id/tvWithdraw"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:visibility="gone"
+            android:text="@string/withdrawal"
+            android:gravity="center"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:textColor="@color/white"
+            android:padding="@dimen/_10sdp"
+            android:textSize="@dimen/_13sdp"
+            android:elevation="@dimen/_3sdp"
+            android:backgroundTint="@color/redDark"
+            android:fontFamily="@font/fira_sans_medium"
+            android:background="@drawable/btn_rectangular_green" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tvSendReceiveMoney"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/sendReceiveMoney"
+        android:visibility="gone"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:gravity="center"
+        android:layout_marginStart="@dimen/_10sdp"
+        android:layout_marginEnd="@dimen/_10sdp"
+        android:textColor="@color/white"
+        android:padding="@dimen/_10sdp"
+        android:textSize="@dimen/_13sdp"
+        android:elevation="@dimen/_3sdp"
+        android:backgroundTint="@color/redDark"
+        android:fontFamily="@font/fira_sans_medium"
+        android:background="@drawable/btn_rectangular_green" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/transactionHistory"
+            android:textSize="@dimen/_15sdp"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_10sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:textColor="@color/textBlack"
+            android:fontFamily="@font/fira_sans_medium" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvList"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:orientation="vertical"
+            android:overScrollMode="never" />
+
+        <TextView
+            android:id="@+id/tvNoDataFound"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            android:textSize="@dimen/_11sdp"
+            android:textColor="@color/textGrey"
+            android:layout_gravity="center"
+            android:layout_margin="@dimen/_50sdp"
+            android:fontFamily="@font/fira_sans_regular"
+            android:text="@string/noDataFound" />
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="code.activity.WithdrawalAmountActivity"
+    tools:ignore="SpUsage">
+
+  <include
+      android:id="@+id/header"
+      layout="@layout/inflate_header" />
+
+  <TextView
+      android:id="@+id/tvAmount"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:fontFamily="@font/fira_sans_medium"
+      android:text="0"
+      android:textColor="@color/textBlack"
+      android:textSize="@dimen/_25sdp" />
+
+  <TextView
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_gravity="center"
+      android:layout_marginTop="@dimen/_5sdp"
+      android:fontFamily="@font/fira_sans_medium"
+      android:text="@string/availableWalletBalance"
+      android:textSize="@dimen/_15sdp" />
+
+  <EditText
+      android:textAlignment="viewStart"
+      android:id="@+id/etAmount"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_40sdp"
+      android:layout_marginStart="@dimen/_20sdp"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:layout_marginEnd="@dimen/_20sdp"
+      android:background="@drawable/et_rectangular_border"
+      android:fontFamily="@font/fira_sans_regular"
+      android:hint="@string/enterAmount"
+      android:inputType="number"
+      android:maxLength="10"
+      android:paddingStart="@dimen/_10sdp"
+      android:paddingEnd="@dimen/_10sdp"
+      android:singleLine="true"
+      android:textColor="@color/textBlack"
+      android:textSize="@dimen/_13sdp"
+      tools:ignore="RtlSymmetry" />
+
+  <LinearLayout
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_30sdp"
+      android:layout_marginStart="@dimen/_20sdp"
+      android:layout_marginTop="@dimen/_20sdp"
+      android:layout_marginEnd="@dimen/_20sdp"
+      android:orientation="horizontal">
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn25Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:background="@drawable/btn_rectangular_green"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:text="25%"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn50Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_rectangular_green"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:text="50%"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn75Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_rectangular_green"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:text="75%"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btn100Perc"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_marginStart="@dimen/_4sdp"
+        android:layout_weight="1"
+        android:background="@drawable/btn_rectangular_green"
+        android:fontFamily="@font/fira_sans_regular"
+        android:paddingLeft="@dimen/_5sdp"
+        android:paddingRight="@dimen/_5sdp"
+        android:text="100%"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="@dimen/_11sdp" />
+
+  </LinearLayout>
+
+  <androidx.appcompat.widget.AppCompatButton
+      android:id="@+id/btnWithdrawl"
+      android:layout_width="match_parent"
+      android:layout_height="@dimen/_40sdp"
+      android:layout_gravity="center"
+      android:layout_marginTop="@dimen/_30sdp"
+      android:layout_marginBottom="@dimen/_20sdp"
+      android:layout_marginEnd="@dimen/_15sdp"
+      android:layout_marginStart="@dimen/_15sdp"
+      android:background="@drawable/btn_rectangular"
+      android:fontFamily="@font/fira_sans_sem_bold"
+      android:text="@string/withdrawal"
+      android:textColor="@color/black"
+      android:textSize="@dimen/_15sdp" />
+
+</LinearLayout>

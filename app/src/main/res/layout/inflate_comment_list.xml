@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="@dimen/_10sdp">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <TextView
+            android:layout_width="@dimen/_25sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:background="@drawable/circle_bg"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp"
+            android:text=""
+            android:textAllCaps="true"
+            android:maxLength="1"
+            android:backgroundTint="@color/commentbg"
+            android:fontFamily="@font/fira_sans_sem_bold"
+            android:gravity="center"
+            android:id="@+id/tvCommentShortName"/>
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/ivProfileImage"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_user_default" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="10dp"
+            android:layout_toEndOf="@+id/tvCommentShortName"
+            android:layout_toStartOf="@+id/ivMenu"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/textGrey"
+                android:id="@+id/tvName"
+                android:textSize="@dimen/_11sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text=""
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/black"
+                android:id="@+id/tvCommentMsg"
+                android:textSize="@dimen/_12sdp"
+                android:fontFamily="@font/fira_sans_regular"
+                android:text=""
+                />
+
+
+        </LinearLayout>
+
+        <ImageView
+            android:id="@+id/ivMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:src="@drawable/ic_menus" />
+    </RelativeLayout>
+</LinearLayout>

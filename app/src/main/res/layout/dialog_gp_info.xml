@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="@dimen/_10sdp"
+    tools:ignore="SpUsage">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/fira_sans_medium"
+        android:text="@string/gpCalculation"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_12sdp" />
+
+    <TextView
+        android:id="@+id/tvCurrentGpValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:text="@string/currentValue"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvGpCommission"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:text="@string/currentValue"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_10sdp" />
+
+    <TextView
+        android:id="@+id/tvGpCalculated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_3sdp"
+        android:fontFamily="@font/fira_sans_regular"
+        android:text="@string/currentValue"
+        android:textColor="@color/textBlack"
+        android:textSize="@dimen/_10sdp" />
+
+
+</LinearLayout>
